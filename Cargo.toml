@@ -1,0 +1,12 @@
+[package]
+name = "youtube_downloader"
+version = "0.1.0"
+authors = ["howeih <howeih@gmail.com>"]
+
+[dependencies]
+url = "1.6.0"
+futures = "0.1"
+reqwest = "0.8.2"
+tokio-core = "0.1"
+serde_json = "1.0"
+pbr = "1.0.0"
