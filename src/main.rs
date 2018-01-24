@@ -132,7 +132,7 @@ fn download_video(video_title: &str, stream_vec: Vec<HashMap<String, String>>) {
 fn parse_stream_map(stream_map: &str) -> Vec<HashMap<String, String>> {
     let decode_stream = percent_decode(stream_map.as_bytes()).decode_utf8().unwrap();
     let stream_options: Vec<&str> = decode_stream.split(",").collect();
-    let mut stream_vec: Vec<HashMap<String, String>> = Vec::new();
+    let mut stream_vec: Vec<HashMap<String, String>> = Vec::with_capacity(16);
     for option in stream_options {
         let download_info = parse_download_url(option.to_string());
         stream_vec.push(download_info);
